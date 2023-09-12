@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -48,6 +49,10 @@ namespace Cinema
             int index = Convert.ToInt32(RoomSelectionList.SelectedItem.Value);
             bool Isreducted = flexCheckDefault.Checked;
             BuyOne(index, Isreducted);
+            string name = NameBox.Text;
+            string surname = SurnameBox.Text;
+            NewCustomer(name, surname, Isreducted, index);
+
             desc.InnerHtml = "";
             WriteTable();
 
@@ -57,6 +62,10 @@ namespace Cinema
         protected void BuyOne(int index, bool Isreducted)
         {
             Rooms[index].newTicket(Isreducted);
+        }
+        protected void NewCustomer(string name, string surname, bool isReduct, int index) {
+            Customer newCustomer = new Customer(name, surname, isReduct);
+            Rooms[index].CustomerList.Add(newCustomer);
         }
         protected void WriteTable()
         {
@@ -70,7 +79,7 @@ namespace Cinema
 
         protected void Logout_Click(object sender, EventArgs e)
         {
-            HttpCookie httpCookie = new HttpCookie("CINEMA _COOKIE");
+            HttpCookie httpCookie = new HttpCookie("CINEMA_COOKIE");
             httpCookie.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Add(httpCookie);
             Application["IsLogged"] = "false";

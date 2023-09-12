@@ -22,23 +22,45 @@
                     <asp:ListItem Value="2" Text="Sala Est"></asp:ListItem>
                 </asp:DropDownList>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" runat="server"/>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" runat="server" />
                     <label class="form-check-label" for="flexCheckDefault">
                         Prezzo ridotto?
                     </label>
                 </div>
+                           
+                <div class="col-12 text-center mt-1">
+                    <h2>Inserisci i dati</h2>
+                </div>
+                <div class="col-12 mt-1 d-flex flex-column align-items-center">
+                    <p class="h5 m-0">Nome</p>
+                    <asp:TextBox ID="NameBox" runat="server" CssClass="form-control w-50"></asp:TextBox>
+                </div>
+
+                <div class="col-12 mt-1 d-flex flex-column align-items-center">
+                    <p class="h5 m-0">Cognome</p>
+                    <asp:TextBox ID="SurnameBox" CssClass="form-control w-50" runat="server"></asp:TextBox>
+                </div>
+
+            
                 <asp:Button ID="Confirm" runat="server" Text="Conferma Biglietto" OnClick="Confirm_Click" CssClass="btn btn-success" />
             </div>
-            <div class="col-12 d-flex flex-column align-items-center mt-5">
-                <h3>Ecco il riassunto di tutti i biglietti
-                </h3>
-                <div id="desc" runat="server" class="w-75">
+
+            <div class="row">
+                <div class="col-12 d-flex flex-column align-items-center mt-5">
+                    <h3>Ecco il riassunto di tutti i biglietti
+                    </h3>
+                    <div id="desc" runat="server" class="w-75">
+                    </div>
+                </div>
+                                <div class="col-12 text-center">
+                    <asp:Button ID="Logout" runat="server" Text="Log-Out" OnClick="Logout_Click" CssClass="btn btn-danger w-50 mt-5" />
                 </div>
             </div>
-            <div class="col-12 text-center">
-                <asp:Button ID="Logout" runat="server" Text="Log-Out" onclick="Logout_Click" CssClass="btn btn-danger w-50 mt-5"/>
-            </div>
+
         </div>
+
+
+
     </form>
 </body>
 </html>

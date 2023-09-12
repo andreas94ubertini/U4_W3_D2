@@ -51,6 +51,24 @@ namespace Cinema
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox flexCheckDefault;
 
         /// <summary>
+        /// Controllo NameBox.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NameBox;
+
+        /// <summary>
+        /// Controllo SurnameBox.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SurnameBox;
+
+        /// <summary>
         /// Controllo Confirm.
         /// </summary>
         /// <remarks>

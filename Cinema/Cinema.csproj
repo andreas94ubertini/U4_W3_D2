@@ -191,6 +191,7 @@
     <Compile Include="BuyTicket.aspx.designer.cs">
       <DependentUpon>BuyTicket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

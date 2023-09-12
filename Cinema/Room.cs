@@ -10,6 +10,7 @@ namespace Cinema
         private const int maxCapacity = 120;
         private int FullPriceTicket = 0;
         private int ReductedPriceTicket = 0;
+        public  List<Customer> CustomerList = new List<Customer>();
 
         public int GetAvailable()
         {
